@@ -142,8 +142,6 @@ export function Services() {
         ));
     };
 
-    const selectedService = services.find(s => s.id === selected);
-
     return (
         <div className="space-y-6 animate-fade-in">
             <PageHeader

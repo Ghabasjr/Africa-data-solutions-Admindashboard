@@ -151,7 +151,7 @@ export function Dashboard() {
                                 <YAxis axisLine={false} tickLine={false} tick={{ fill: '#636366', fontSize: 11 }} tickFormatter={fmt} />
                                 <Tooltip
                                     contentStyle={{ background: 'var(--card-bg)', border: 'none', borderRadius: '12px', boxShadow: 'var(--shadow-lg)' }}
-                                    formatter={(v: number) => [`₦${fmt(v)}`, 'Revenue']}
+                                    formatter={(v: any) => [`₦${fmt(v as number)}`, 'Revenue']}
                                 />
                                 <Area type="monotone" dataKey="revenue" stroke="#007AFF" strokeWidth={2.5} fill="url(#revGrad)" />
                             </AreaChart>

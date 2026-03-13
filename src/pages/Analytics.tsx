@@ -109,7 +109,7 @@ export function Analytics() {
                                 <YAxis axisLine={false} tickLine={false} tick={{ fill: '#636366', fontSize: 11 }} tickFormatter={fmt} />
                                 <Tooltip
                                     contentStyle={{ background: 'var(--card-bg)', border: 'none', borderRadius: '12px', boxShadow: 'var(--shadow-lg)', fontSize: 12 }}
-                                    formatter={(v: number, name: string) => [fmt(v), name]}
+                                    formatter={(v: any, name: any) => [fmt(v as number), name]}
                                 />
                                 <Area type="monotone" dataKey="data" name="Data Plans" stroke="#007AFF" strokeWidth={2} fill="url(#gData)" stackId="1" />
                                 <Area type="monotone" dataKey="airtime" name="Airtime" stroke="#FF9500" strokeWidth={2} fill="url(#gAirtime)" stackId="1" />
@@ -138,7 +138,7 @@ export function Analytics() {
                                 </Pie>
                                 <Tooltip
                                     contentStyle={{ background: 'var(--card-bg)', border: 'none', borderRadius: '10px', boxShadow: 'var(--shadow-lg)', fontSize: 12 }}
-                                    formatter={(v: number) => [`${v}%`]}
+                                    formatter={(v: any) => [`${v}%`]}
                                 />
                                 <Legend iconType="circle" iconSize={8} wrapperStyle={{ fontSize: 11 }} />
                             </PieChart>
@@ -178,7 +178,7 @@ export function Analytics() {
                                 <YAxis type="category" dataKey="name" axisLine={false} tickLine={false} tick={{ fill: '#636366', fontSize: 11 }} width={48} />
                                 <Tooltip
                                     contentStyle={{ background: 'var(--card-bg)', border: 'none', borderRadius: '10px', boxShadow: 'var(--shadow-lg)', fontSize: 12 }}
-                                    formatter={(v: number) => [fmt(v), 'Revenue']}
+                                    formatter={(v: any) => [fmt(v as number), 'Revenue']}
                                 />
                                 <Bar dataKey="revenue" radius={[0, 6, 6, 0]}>
                                     {topProviders.map(p => <Cell key={p.name} fill={p.color} />)}
